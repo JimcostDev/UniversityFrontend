@@ -11,7 +11,7 @@ export class CourseService {
   public url: string;
 
   constructor(public httpClient: HttpClient) {
-    //this.url = './assets/MOCK_DATA.json';
+    //this.url = './assets/MOCK_DATA_COURSES.json';
     this.url = 'http://localhost/University.API/api/Courses/'
     // this.url = environment.apiUrl + 'api/Courses/';
   }
