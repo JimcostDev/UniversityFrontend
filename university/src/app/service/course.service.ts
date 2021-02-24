@@ -19,7 +19,15 @@ export class CourseService {
     return this.httpClient.get(this.url);
   }
 
+  public getById(id: number): Observable<any>{
+    return this.httpClient.get(this.url + id)
+  }
+
   public save(course: Course): Observable<any> {
     return this.httpClient.post(this.url, course);
+  }
+
+  public edit(course: Course): Observable<any>{
+    return this.httpClient.put(this.url + course.CourseID, course);
   }
 }

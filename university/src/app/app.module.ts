@@ -11,14 +11,17 @@ import { FormsModule } from '@angular/forms';
 import { CourseService } from './service/course.service';
 import { CourseListComponent } from './component/course-list/course-list.component';
 import { CourseSaveComponent } from './component/course-save/course-save.component';
+import { CourseEditComponent } from './component/course-edit/course-edit.component';
 import { StudentListComponent } from './component/student-list/student-list.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CourseListComponent,
     CourseSaveComponent,
-    StudentListComponent
+    StudentListComponent,
+    CourseEditComponent
   ],
   imports: [
     BrowserModule,

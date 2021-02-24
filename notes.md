@@ -14,16 +14,34 @@
 
 -- ng g service nombre-carpeta/nombre-archivo -> generar un servicio (capa logica)
 
-## PASOS PARA CREAR CRUD
+## LISTAR
 
--- 1. crear el componente´para la entidad -> ng g component component/student-list
+-- 1. crear el componente´para la entidad -> ng g component component/course-list
 
--- 2. en app.routing.module.ts registrar el componente; es decir importar -> import { StudentListComponent } from './component/student-list/student-list.component';)
+-- 2. agregar el path correspondiente en app.routing.module.ts -> { path:'course-list', component: CourseListComponent }
 
--- 3. agregar el path correspondiente -> { path:'student-list', component: StudentListComponent }
+-- 3. crear el modelo para la entidad -> ng g class  domain/Course
 
--- 4. crear el modelo para la entidad -> ng g class  domain/Student
+-- 4. definir las propiedades del modelo -> Course
 
--- 5. definir las propiedades del modelo -> Student
+-- 5. crear el servicio para la entidad -> ng g service service/Course 
 
--- 6. crear el servicio para la entidad -> ng g service service/Student 
+## EDITAR
+
+-- 1. crear el metodo put en el service 
+
+-- 2. generar el componente -> ng g component component/course-edit
+
+-- 3. agregar el path correspondiente en app.routing.module.ts -> { path:'course-edit', component: CourseEditComponent }
+
+-- 4. editamos el edit.component.ts 
+
+-- 5. agregar al import Router la propiedad ActivatedRoute
+
+-- 6. crear metodo getById en edit.component.ts 
+
+-- 7. en ngOnInit() agregar el metodo getById
+
+-- 8. crear el formulario en edit.component.html
+
+-- 9. crear metodo edit() en edit.component.ts 
