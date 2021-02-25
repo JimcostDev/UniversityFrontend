@@ -19,6 +19,8 @@ import { CourseDeleteComponent } from './component/course-delete/course-delete.c
 import { StudentService } from './service/student.service';
 import { StudentListComponent } from './component/student-list/student-list.component';
 import { StudentSaveComponent } from './component/student-save/student-save.component';
+import { StudentEditComponent } from './component/student-edit/student-edit.component';
+import { StudentDeleteComponent } from './component/student-delete/student-delete.component';
 
 
 
@@ -31,7 +33,9 @@ import { StudentSaveComponent } from './component/student-save/student-save.comp
     StudentListComponent,
     CourseEditComponent,
     CourseDeleteComponent,
-    StudentSaveComponent
+    StudentSaveComponent,
+    StudentEditComponent,
+    StudentDeleteComponent
   ],
   imports: [
     BrowserModule,

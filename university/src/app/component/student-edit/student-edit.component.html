@@ -1,5 +1,5 @@
 <div class="container">
-  <h2>Create Student</h2>
+  <h2>Edit Student</h2>
 
   <div class="form-row" *ngIf="showMsg">
     <div class="alert alert-{{ type }} col-md-12" role="alert">
@@ -7,7 +7,7 @@
     </div>
   </div>
 
-  <form #studentForm="ngForm">
+  <form #studentForm="ngForm" *ngIf="student">
     <div class="form-row">
       <div class="col-md-4">
         <label>Last Name:</label>
@@ -49,8 +49,8 @@
 
     <br />
     <div class="btn-group" role="group">
-      <button class="btn btn-outline-primary btn-sm" (click)="save()">
-        Save
+      <button class="btn btn-outline-primary btn-sm" (click)="edit()">
+        Edit
       </button>
       <a class="btn btn-outline-primary btn-sm" [routerLink]="['/student-list']"
         >Back</a
