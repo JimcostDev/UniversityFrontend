@@ -58,7 +58,7 @@
 
 -- 4. en app.routing.module.ts agregar un nuevo path -> { path:'course-save', component: CourseSaveComponent },
 
--- 5. en save.component creamos el metodo save() e inyectamos el service
+-- 5. en save.component.ts creamos el metodo save() e inyectamos el service
 
 -- 6. en el metodo ngOnInit() inicializamos la entidad
 

@@ -1,0 +1,38 @@
+<div class="container">
+    <h2>Create Student</h2>
+  
+    <div class="form-row" *ngIf="showMsg">
+      <div class="alert alert-{{type}} col-md-12" role="alert">
+        {{msg}}
+      </div>
+    </div>
+  
+    <form #courseForm="ngForm">
+  
+      <div class="form-row">
+        <div class="col-md-4">
+          <label>Last Name:</label>
+          <input type="text" id="lastName" name="lastName" placeholder="Enther the title" class="form-control" #lastName
+            [(ngModel)]="student.LastName" />
+        </div>
+        <div class="col-md-4">
+          <label>First Name:</label>
+          <input type="text" id="firstMidName" name="firstMidName" placeholder="Enther the credits" class="form-control" #firstMidName
+            [(ngModel)]="student.FirstMidName" />
+        </div>
+        <div class="col-md-4">
+            <label>Enrollment Date:</label>
+            <input type="date" id="enrollmentDate" name="enrollmentDate" placeholder="Enther the credits" class="form-control" #enrollmentDate
+              [(ngModel)]="student.EnrollmentDate" />
+          </div>
+      </div>
+  
+      <br>
+      <div class="btn-group" role="group">
+        <button class="btn btn-outline-primary btn-sm" (click)="save()">Save</button>
+        <a class="btn btn-outline-primary btn-sm" [routerLink]="[ '/student-list' ]">Back</a>
+      </div>
+    </form>
+  
+  </div>
+
