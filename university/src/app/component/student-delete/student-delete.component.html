@@ -32,6 +32,7 @@
               class="form-control"
               #lastName
               [(ngModel)]="student.LastName"
+              readonly
             />
           </div>
           <div class="col-md-4">
@@ -44,6 +45,7 @@
               class="form-control"
               #firstMidName
               [(ngModel)]="student.FirstMidName"
+              readonly
             />
           </div>
           <div class="col-md-4">
@@ -56,13 +58,14 @@
               class="form-control"
               #enrollmentDate
               [(ngModel)]="student.EnrollmentDate"
+              readonly
             />
           </div>
         </div>
     
         <br />
         <div class="btn-group" role="group">
-          <button class="btn btn-outline-primary btn-sm" (click)="edit()">
+          <button class="btn btn-outline-primary btn-sm" (click)="delete()">
             Edit
           </button>
           <a class="btn btn-outline-primary btn-sm" [routerLink]="['/student-list']"
