@@ -15,8 +15,10 @@ import { CourseSaveComponent } from './component/course-save/course-save.compone
 import { CourseEditComponent } from './component/course-edit/course-edit.component';
 
 //Students
+import { StudentService } from './service/student.service';
 import { StudentListComponent } from './component/student-list/student-list.component';
 import { CourseDeleteComponent } from './component/course-delete/course-delete.component';
+
 
 
 
@@ -36,7 +38,8 @@ import { CourseDeleteComponent } from './component/course-delete/course-delete.c
     FormsModule
   ],
   providers: [
-    CourseService
+    CourseService,
+    StudentService
   ],
   bootstrap: [AppComponent]
 })

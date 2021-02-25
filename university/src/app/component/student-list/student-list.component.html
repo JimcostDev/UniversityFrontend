@@ -1,1 +1,28 @@
-<p>student-list works!</p>
+  
+<div class="container">
+    <h1>Students</h1>
+  
+    <a class="btn btn-sm btn-outline-success" [routerLink]="[ '/student-save' ]">Create</a>
+    <br>
+    <table class="table table-bordered">
+      <tr>
+        <td>ID</td>
+        <td>LastName</td>
+        <td>FirstMidName</td>
+        <td>EnrollmentDate</td>
+        <td></td>
+      </tr>
+      <tr *ngFor="let item of students">
+        <td>{{ item.ID }}</td>
+        <td>{{ item.LastName }}</td>
+        <td>{{ item.FirstMidName }}</td>
+        <td>{{ item.EnrollmentDate }}</td>
+        <td>
+          <div class="btn-group" role="group">
+            <a class="btn btn-sm btn-outline-warning" [routerLink]="[ '/student-edit', item.ID ]">Edit</a>
+            <a class="btn btn-sm btn-outline-danger" [routerLink]="[ '/student-delete', item.ID ]">Delete</a>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>

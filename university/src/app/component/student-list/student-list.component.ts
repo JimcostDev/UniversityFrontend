@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy} from '@angular/core';
+import { StudentService } from 'src/app/service/student.service';
+import { Subscription } from 'rxjs';
+import { Student } from 'src/app/domain/student';
 
 @Component({
   selector: 'app-student-list',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentListComponent implements OnInit {
 
-  constructor() { }
+  public students: Student[] = [];
+  public subStudents: Subscription = new Subscription;
+
+  constructor(public StudentService: StudentService) { }
+
+  ngOnDestroy(): void {
+    this.subStudents.unsubscribe();
+  }
 
   ngOnInit(): void {
+    this.getAll();
+  }
+
+  getAll() {
+    this.subStudents = this.StudentService.getAll().subscribe(data => {
+      this.students = data;
+    });
   }
 
 }
