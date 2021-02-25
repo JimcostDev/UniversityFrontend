@@ -40,13 +40,29 @@
 
 -- 12. en list.component.ts pasar como parametro del constructor el CourseService y crear el metodo getAll()
 
--- 13. en el metodo ngOnInit() llamamos el metodo getAll()
+-- 13. en list.component.ts  en el metodo ngOnInit() llamamos el metodo getAll()
 
--- 14. para trabajar con el patron observador/observable importar: import { Subscription } from 'rxjs';
+-- 14. en list.component.ts para trabajar con el patron observador/observable importar: import { Subscription } from 'rxjs';
 
--- 15. crear el metodo ngOnDestroy()
+-- 15. en list.component.ts crear el metodo ngOnDestroy()
 
 -- 16. crear la vista en list.component.html
+
+## CREAR
+
+-- 1. crear el metodo post en el service
+
+-- 2. crear el componente -> ng g component component/course-save
+
+-- 3. en app.module.ts agregar una nueva dependencia -> import { FormsModule } from '@angular/forms'; y en los imports: registramos a FormsModule
+
+-- 4. en app.routing.module.ts agregar un nuevo path -> { path:'course-save', component: CourseSaveComponent },
+
+-- 5. en save.component creamos el metodo save() e inyectamos el service
+
+-- 6. en el metodo ngOnInit() inicializamos la entidad
+
+-- 7. crear el formulario en save.component.html
 
 ## EDITAR
 
