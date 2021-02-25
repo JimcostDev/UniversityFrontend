@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Course } from '../domain/course';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +13,8 @@ export class CourseService {
 
   constructor(public httpClient: HttpClient) {
     //this.url = './assets/MOCK_DATA_COURSES.json';
-    this.url = 'http://localhost/University.API/api/Courses/'
-    // this.url = environment.apiUrl + 'api/Courses/';
+    //this.url = 'http://localhost/University.API/api/Courses/'
+    this.url = environment.apiUrl + 'api/Courses/';
   }
   public getAll(): Observable<any> {
     return this.httpClient.get(this.url);
