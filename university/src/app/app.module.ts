@@ -16,6 +16,7 @@ import { CourseEditComponent } from './component/course-edit/course-edit.compone
 
 //Students
 import { StudentListComponent } from './component/student-list/student-list.component';
+import { CourseDeleteComponent } from './component/course-delete/course-delete.component';
 
 
 
@@ -25,7 +26,8 @@ import { StudentListComponent } from './component/student-list/student-list.comp
     CourseListComponent,
     CourseSaveComponent,
     StudentListComponent,
-    CourseEditComponent
+    CourseEditComponent,
+    CourseDeleteComponent
   ],
   imports: [
     BrowserModule,

@@ -16,7 +16,7 @@
 
 ## LISTAR
 
--- 1. crear el componente´para la entidad -> ng g component component/course-list
+-- 1. crear el componente para la entidad -> ng g component component/course-list
 
 -- 2. agregar el path correspondiente en app.routing.module.ts -> { path:'course-list', component: CourseListComponent }
 
@@ -70,7 +70,7 @@
 
 -- 2. generar el componente -> ng g component component/course-edit
 
--- 3. agregar el path correspondiente en app.routing.module.ts -> { path:'course-edit', component: CourseEditComponent }
+-- 3. agregar el path correspondiente en app.routing.module.ts -> { path:'course-edit/:id', component: CourseEditComponent }
 
 -- 4. editamos el edit.component.ts 
 
@@ -83,3 +83,15 @@
 -- 8. crear el formulario en edit.component.html
 
 -- 9. crear metodo edit() en edit.component.ts 
+
+## ELIMINAR
+
+-- 1. en el service crear el metodo delete()
+
+-- 2. generar el componente -> ng g component component/course-delete
+
+-- 3. en delete.component.ts creamos el metodo getById() y el metodo delete()
+
+-- 4. en delete.component.html crear el formulario para eliminar
+
+-- 5. agregar el path correspondiente en app.routing.module.ts -> { path:'course-delete/:id', component: CourseDeleteComponent }
