@@ -4,6 +4,7 @@ import { CourseDeleteComponent } from './component/course-delete/course-delete.c
 import { CourseEditComponent } from './component/course-edit/course-edit.component';
 import { CourseListComponent } from './component/course-list/course-list.component';
 import { CourseSaveComponent } from './component/course-save/course-save.component';
+import { StudentDeleteComponent } from './component/student-delete/student-delete.component';
 import { StudentEditComponent } from './component/student-edit/student-edit.component';
 import { StudentListComponent } from './component/student-list/student-list.component';
 import { StudentSaveComponent } from './component/student-save/student-save.component';
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path:'course-delete/:id', component: CourseDeleteComponent },
   { path:'student-list', component: StudentListComponent },
   { path:'student-save', component: StudentSaveComponent },
-  { path:'student-edit/:id', component: StudentEditComponent }
+  { path:'student-edit/:id', component: StudentEditComponent },
+  { path:'student-delete/:id', component: StudentDeleteComponent }
 ];
 
 @NgModule({
