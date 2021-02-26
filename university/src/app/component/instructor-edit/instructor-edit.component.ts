@@ -38,7 +38,7 @@ export class InstructorEditComponent implements OnInit {
       console.log(this.instructor);
       
       this.instructorService.edit(this.instructor).subscribe(data => {
-        this.router.navigate(['/student-list']);
+        this.router.navigate(['/instructor-list']);
       },error => {
         console.log(error);
         this.showMsg = true;
