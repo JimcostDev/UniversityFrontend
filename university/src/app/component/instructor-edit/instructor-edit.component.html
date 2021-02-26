@@ -1,0 +1,61 @@
+<div class="container">
+    <h2>Edit Instructor</h2>
+  
+    <div class="form-row" *ngIf="showMsg">
+      <div class="alert alert-{{ type }} col-md-12" role="alert">
+        {{ msg }}
+      </div>
+    </div>
+  
+    <form #instructorForm="ngForm" *ngIf="instructor">
+      <div class="form-row">
+        <div class="col-md-4">
+          <label>Last Name:</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            placeholder="Enther the last name"
+            class="form-control"
+            #lastName
+            [(ngModel)]="instructor.LastName"
+          />
+        </div>
+        <div class="col-md-4">
+          <label>First Name:</label>
+          <input
+            type="text"
+            id="firstMidName"
+            name="firstMidName"
+            placeholder="Enther the first name"
+            class="form-control"
+            #firstMidName
+            [(ngModel)]="instructor.FirstMidName"
+          />
+        </div>
+        <div class="col-md-4">
+          <label>Hire Date:</label>
+          <input
+            type="date"
+            id="hireDate"
+            name="hireDate"
+            placeholder="Enther the hire date"
+            class="form-control"
+            #enrollmentDate
+            [(ngModel)]="instructor.HireDate"
+          />
+        </div>
+      </div>
+  
+      <br />
+      <div class="btn-group" role="group">
+        <button class="btn btn-outline-primary btn-sm" (click)="edit()">
+          Edit
+        </button>
+        <a class="btn btn-outline-primary btn-sm" [routerLink]="['/instructor-list']"
+          >Back</a
+        >
+      </div>
+    </form>
+  </div>
+  

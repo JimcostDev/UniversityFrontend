@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Instructor } from 'src/app/domain/instructor';
 import { InstructorService } from 'src/app/service/instructor.service';
