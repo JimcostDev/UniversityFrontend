@@ -22,6 +22,11 @@ import { StudentSaveComponent } from './component/student-save/student-save.comp
 import { StudentEditComponent } from './component/student-edit/student-edit.component';
 import { StudentDeleteComponent } from './component/student-delete/student-delete.component';
 
+//Instructors
+import { InstructorService } from './service/instructor.service';
+import { InstructorListComponent } from './component/instructor-list/instructor-list.component';
+
+
 
 
 
@@ -35,7 +40,8 @@ import { StudentDeleteComponent } from './component/student-delete/student-delet
     CourseDeleteComponent,
     StudentSaveComponent,
     StudentEditComponent,
-    StudentDeleteComponent
+    StudentDeleteComponent,
+    InstructorListComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +51,8 @@ import { StudentDeleteComponent } from './component/student-delete/student-delet
   ],
   providers: [
     CourseService,
-    StudentService
+    StudentService,
+    InstructorService
   ],
   bootstrap: [AppComponent]
 })
