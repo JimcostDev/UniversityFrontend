@@ -29,4 +29,8 @@ export class InstructorService {
   public edit(student: Instructor): Observable<any>{
     return this.httpClient.put(this.url + student.ID, student);
   }
+
+  public delete(id: number) {
+    return this.httpClient.delete(this.url + id)
+  }
 }

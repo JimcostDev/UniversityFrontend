@@ -27,6 +27,7 @@ import { InstructorService } from './service/instructor.service';
 import { InstructorListComponent } from './component/instructor-list/instructor-list.component';
 import { InstructorEditComponent } from './component/instructor-edit/instructor-edit.component';
 import { InstructorSaveComponent } from './component/instructor-save/instructor-save.component';
+import { InstructorDeleteComponent } from './component/instructor-delete/instructor-delete.component';
 
 
 
@@ -45,7 +46,8 @@ import { InstructorSaveComponent } from './component/instructor-save/instructor-
     StudentDeleteComponent,
     InstructorListComponent,
     InstructorEditComponent,
-    InstructorSaveComponent
+    InstructorSaveComponent,
+    InstructorDeleteComponent
   ],
   imports: [
     BrowserModule,

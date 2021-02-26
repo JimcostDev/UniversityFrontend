@@ -1,5 +1,5 @@
 <div class="container">
-    <h2>Delete Student</h2>
+    <h2>Delete Instructor</h2>
   
     <div class="form-row" *ngIf="!showMsg">
       <div class="alert alert-danger col-md-12" role="alert">
@@ -7,7 +7,7 @@
         <br>
         <div class="btn-group" role="group">
           <button class="btn btn-outline-danger btn-sm" (click)="delete()">Delete</button>
-          <a class="btn btn-outline-danger btn-sm" [routerLink]="[ '/student-list' ]">Back</a>
+          <a class="btn btn-outline-danger btn-sm" [routerLink]="[ '/instructor-list' ]">Back</a>
         </div>
       </div>
     </div>
@@ -16,11 +16,11 @@
       <div class="alert alert-{{type}} col-md-12" role="alert">
         {{msg}}
         <br>
-        <a class="btn btn-outline-danger btn-sm" [routerLink]="[ '/student-list' ]">Back</a>
+        <a class="btn btn-outline-danger btn-sm" [routerLink]="[ '/instructor-list' ]">Back</a>
       </div>
     </div>
   
-    <form #studentForm="ngForm" *ngIf="student">
+    <form #studentForm="ngForm" *ngIf="instructor">
         <div class="form-row">
           <div class="col-md-4">
             <label>Last Name:</label>
@@ -31,7 +31,7 @@
               placeholder="Enther the last name"
               class="form-control"
               #lastName
-              [(ngModel)]="student.LastName"
+              [(ngModel)]="instructor.LastName"
               readonly
             />
           </div>
@@ -44,7 +44,7 @@
               placeholder="Enther the first name"
               class="form-control"
               #firstMidName
-              [(ngModel)]="student.FirstMidName"
+              [(ngModel)]="instructor.FirstMidName"
               readonly
             />
           </div>
@@ -52,12 +52,12 @@
             <label>Enrollment Date:</label>
             <input
               type="date"
-              id="enrollmentDate"
-              name="enrollmentDate"
-              placeholder="Enther the enrollment date"
+              id="hireDate"
+              name="hireDate"
+              placeholder="Enther the hire date"
               class="form-control"
               #enrollmentDate
-              [(ngModel)]="student.EnrollmentDate"
+              [(ngModel)]="instructor.HireDate"
               readonly
             />
           </div>
@@ -68,7 +68,7 @@
           <button class="btn btn-outline-primary btn-sm" (click)="delete()">
             Edit
           </button>
-          <a class="btn btn-outline-primary btn-sm" [routerLink]="['/student-list']"
+          <a class="btn btn-outline-primary btn-sm" [routerLink]="['/instructor-list']"
             >Back</a
           >
         </div>
