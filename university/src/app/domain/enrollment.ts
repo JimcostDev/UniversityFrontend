@@ -9,8 +9,8 @@ export class Enrollment {
         public Grade: number,
 
         //relaciones (dependencias)
-        public Course: Course,
-        public Student: Student
+        // public Course: Course,
+        // public Student: Student
 
         ) { }
 }

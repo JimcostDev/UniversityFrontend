@@ -5,6 +5,7 @@ import { CourseEditComponent } from './component/course-edit/course-edit.compone
 import { CourseListComponent } from './component/course-list/course-list.component';
 import { CourseSaveComponent } from './component/course-save/course-save.component';
 import { EnrollmentListComponent } from './component/enrollment-list/enrollment-list.component';
+import { EnrollmentSaveComponent } from './component/enrollment-save/enrollment-save.component';
 import { InstructorDeleteComponent } from './component/instructor-delete/instructor-delete.component';
 import { InstructorEditComponent } from './component/instructor-edit/instructor-edit.component';
 import { InstructorListComponent } from './component/instructor-list/instructor-list.component';
@@ -27,7 +28,8 @@ const routes: Routes = [
   { path:'instructor-save', component: InstructorSaveComponent },
   { path:'instructor-edit/:id', component: InstructorEditComponent },
   { path:'instructor-delete/:id', component: InstructorDeleteComponent },
-  { path:'enrollment-list', component: EnrollmentListComponent }
+  { path:'enrollment-list', component: EnrollmentListComponent },
+  { path:'enrollment-save', component: EnrollmentSaveComponent },
 ];
 
 @NgModule({
