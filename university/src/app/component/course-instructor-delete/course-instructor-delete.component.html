@@ -1,0 +1,54 @@
+<div class="container">
+    <h2>Delete CourseInstructor</h2>
+  
+    <div class="form-row" *ngIf="!showMsg">
+      <div class="alert alert-danger col-md-12" role="alert">
+        Are You Sure?
+        <br>
+        <div class="btn-group" role="group">
+          <button class="btn btn-outline-danger btn-sm" (click)="delete()">Delete</button>
+          <a class="btn btn-outline-danger btn-sm" [routerLink]="[ '/courseInstructor-list' ]">Back</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="form-row" *ngIf="showMsg">
+      <div class="alert alert-{{type}} col-md-12" role="alert">
+        {{msg}}
+        <br>
+        <a class="btn btn-outline-danger btn-sm" [routerLink]="[ '/courseInstructor-list' ]">Back</a>
+      </div>
+    </div>
+  
+    <form #courseInstructorForm="ngForm">
+        <div class="form-row">
+          <div class="col-md-4">
+            <label>CourseID:</label>
+            <input
+              type="text"
+              id="courseID"
+              name="courseID"
+              placeholder="Enther the course ID"
+              class="form-control"
+              #CourseID
+              [(ngModel)]="courseInstructor.CourseID"
+              readonly
+            />
+          </div>
+          <div class="col-md-4">
+            <label>InstructorID:</label>
+            <input
+              type="text"
+              id="instructorID"
+              name="instructorID"
+              placeholder="Enther the instructor ID"
+              class="form-control"
+              #instructorID
+              [(ngModel)]="courseInstructor.InstructorID"
+              readonly
+            />
+          </div>
+        </div>
+      </form>
+  
+  </div>

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CourseDeleteComponent } from './component/course-delete/course-delete.component';
 import { CourseEditComponent } from './component/course-edit/course-edit.component';
+import { CourseInstructorDeleteComponent } from './component/course-instructor-delete/course-instructor-delete.component';
 import { CourseInstructorEditComponent } from './component/course-instructor-edit/course-instructor-edit.component';
 import { CourseInstructorListComponent } from './component/course-instructor-list/course-instructor-list.component';
 import { CourseInstructorSaveComponent } from './component/course-instructor-save/course-instructor-save.component';
@@ -39,7 +40,8 @@ const routes: Routes = [
   { path:'enrollment-delete/:id', component: EnrollmentDeleteComponent },
   { path:'courseInstructor-list', component: CourseInstructorListComponent },
   { path:'courseInstructor-save', component: CourseInstructorSaveComponent },
-  { path:'courseInstructor-edit/:id', component: CourseInstructorEditComponent }
+  { path:'courseInstructor-edit/:id', component: CourseInstructorEditComponent },
+  { path:'courseInstructor-delete/:id', component: CourseInstructorDeleteComponent }
 ];
 
 @NgModule({

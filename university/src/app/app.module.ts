@@ -41,6 +41,7 @@ import { CourseInstructorService } from './service/course-instructor.service';
 import { CourseInstructorListComponent } from './component/course-instructor-list/course-instructor-list.component';
 import { CourseInstructorSaveComponent } from './component/course-instructor-save/course-instructor-save.component';
 import { CourseInstructorEditComponent } from './component/course-instructor-edit/course-instructor-edit.component';
+import { CourseInstructorDeleteComponent } from './component/course-instructor-delete/course-instructor-delete.component';
 
 
 
@@ -69,7 +70,8 @@ import { CourseInstructorEditComponent } from './component/course-instructor-edi
     EnrollmentDeleteComponent,
     CourseInstructorListComponent,
     CourseInstructorSaveComponent,
-    CourseInstructorEditComponent
+    CourseInstructorEditComponent,
+    CourseInstructorDeleteComponent
   ],
   imports: [
     BrowserModule,

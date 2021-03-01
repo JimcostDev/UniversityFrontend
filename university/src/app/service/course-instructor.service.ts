@@ -25,7 +25,13 @@ export class CourseInstructorService {
     return this.httpClient.post(this.url, courseInstructor);
   }
 
-  public edit(courseInstructor: CourseInstructor): Observable<any>{
-    return this.httpClient.put(this.url + courseInstructor.ID, courseInstructor);
+  public edit(courseInstructor: CourseInstructor): Observable<any> {
+    return this.httpClient.put(
+      this.url + courseInstructor.ID,
+      courseInstructor
+    );
+  }
+  public delete(id: number) {
+    return this.httpClient.delete(this.url + id);
   }
 }
