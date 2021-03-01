@@ -1,0 +1,60 @@
+<div class="container">
+  <h2>Create CourseInstructor</h2>
+
+  <div class="form-row" *ngIf="showMsg">
+    <div class="alert alert-{{ type }} col-md-12" role="alert">
+      {{ msg }}
+    </div>
+  </div>
+
+  <form #courseInstructorForm="ngForm">
+    <div class="form-row">
+      <div class="col-md-4">
+        <label>ID:</label>
+        <input
+          type="text"
+          id="courseInstructorID"
+          name="courseInstructorID"
+          placeholder="Enther the courseInstructor ID"
+          class="form-control"
+          #courseInstructorID
+          [(ngModel)]="courseInstructor.ID"
+        />
+      </div>
+      <div class="col-md-4">
+        <label>CourseID:</label>
+        <input
+          type="text"
+          id="courseID"
+          name="courseID"
+          placeholder="Enther the course ID"
+          class="form-control"
+          #CourseID
+          [(ngModel)]="courseInstructor.CourseID"
+        />
+      </div>
+      <div class="col-md-4">
+        <label>InstructorID:</label>
+        <input
+          type="text"
+          id="instructorID"
+          name="instructorID"
+          placeholder="Enther the instructor ID"
+          class="form-control"
+          #instructorID
+          [(ngModel)]="courseInstructor.InstructorID"
+        />
+      </div>
+    </div>
+
+    <br />
+    <div class="btn-group" role="group">
+      <button class="btn btn-outline-primary btn-sm" (click)="save()">
+        Save
+      </button>
+      <a class="btn btn-outline-primary btn-sm" [routerLink]="['/courseInstructor-list']"
+        >Back</a
+      >
+    </div>
+  </form>
+</div>

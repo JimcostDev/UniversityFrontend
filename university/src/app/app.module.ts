@@ -39,6 +39,7 @@ import { EnrollmentDeleteComponent } from './component/enrollment-delete/enrollm
 //CourseInstructors
 import { CourseInstructorService } from './service/course-instructor.service';
 import { CourseInstructorListComponent } from './component/course-instructor-list/course-instructor-list.component';
+import { CourseInstructorSaveComponent } from './component/course-instructor-save/course-instructor-save.component';
 
 
 
@@ -65,7 +66,8 @@ import { CourseInstructorListComponent } from './component/course-instructor-lis
     EnrollmentSaveComponent,
     EnrollmentEditComponent,
     EnrollmentDeleteComponent,
-    CourseInstructorListComponent
+    CourseInstructorListComponent,
+    CourseInstructorSaveComponent
   ],
   imports: [
     BrowserModule,
