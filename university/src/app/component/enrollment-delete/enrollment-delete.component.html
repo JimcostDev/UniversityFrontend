@@ -1,0 +1,69 @@
+<div class="container">
+    <h2>Delete Course</h2>
+  
+    <div class="form-row" *ngIf="!showMsg">
+      <div class="alert alert-danger col-md-12" role="alert">
+        Are You Sure?
+        <br>
+        <div class="btn-group" role="group">
+          <button class="btn btn-outline-danger btn-sm" (click)="delete()">Delete</button>
+          <a class="btn btn-outline-danger btn-sm" [routerLink]="[ '/enrollment-list' ]">Back</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="form-row" *ngIf="showMsg">
+      <div class="alert alert-{{type}} col-md-12" role="alert">
+        {{msg}}
+        <br>
+        <a class="btn btn-outline-danger btn-sm" [routerLink]="[ '/enrollment-list' ]">Back</a>
+      </div>
+    </div>
+  
+    <form #enrollmentForm="ngForm">
+        <div class="form-row">
+          <div class="col-md-4">
+            <label>CourseID:</label>
+            <input
+              type="text"
+              id="courseID"
+              name="courseID"
+              placeholder="Enther the course ID"
+              class="form-control"
+              #courseID
+              [(ngModel)]="enrollment.CourseID"
+              readonly
+            />
+          </div>
+          <div class="col-md-4">
+            <label>StudentID:</label>
+            <input
+              type="text"
+              id="studentID"
+              name="studentID"
+              placeholder="Enther the student ID"
+              class="form-control"
+              #studentID
+              [(ngModel)]="enrollment.StudentID"
+              readonly
+            />
+          </div>
+          <div class="col-md-4">
+            <label>Grade:</label>
+            <input
+              type="number"
+              id="grade"
+              name="grade"
+              placeholder="Enther the grade"
+              class="form-control"
+              min="0"
+              max="4"
+              #grade
+              [(ngModel)]="enrollment.Grade"
+              readonly
+            />
+          </div>
+        </div>
+      </form>
+  
+  </div>

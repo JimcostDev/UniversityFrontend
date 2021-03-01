@@ -36,11 +36,13 @@
         <div class="col-md-4">
           <label>Grade:</label>
           <input
-            type="text"
+            type="number"
             id="grade"
             name="grade"
             placeholder="Enther the grade"
             class="form-control"
+            min="0"
+            max="4"
             #grade
             [(ngModel)]="enrollment.Grade"
           />

@@ -28,4 +28,8 @@ export class EnrollmentService {
   public edit(enrollment: Enrollment): Observable<any>{
     return this.httpClient.put(this.url + enrollment.EnrollmentID, enrollment);
   }
+
+  public delete(id: number) {
+    return this.httpClient.delete(this.url + id)
+  }
 }
