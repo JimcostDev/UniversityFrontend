@@ -21,7 +21,11 @@ export class CourseInstructorService {
     return this.httpClient.get(this.url + id);
   }
 
-  public save(CourseInstructor: CourseInstructor): Observable<any> {
-    return this.httpClient.post(this.url, CourseInstructor);
+  public save(courseInstructor: CourseInstructor): Observable<any> {
+    return this.httpClient.post(this.url, courseInstructor);
+  }
+
+  public edit(courseInstructor: CourseInstructor): Observable<any>{
+    return this.httpClient.put(this.url + courseInstructor.ID, courseInstructor);
   }
 }
