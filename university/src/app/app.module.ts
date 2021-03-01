@@ -29,6 +29,11 @@ import { InstructorEditComponent } from './component/instructor-edit/instructor-
 import { InstructorSaveComponent } from './component/instructor-save/instructor-save.component';
 import { InstructorDeleteComponent } from './component/instructor-delete/instructor-delete.component';
 
+//Enrollments
+import { EnrollmentService } from './service/enrollment.service';
+import { EnrollmentListComponent } from './component/enrollment-list/enrollment-list.component';
+
+
 
 
 
@@ -47,7 +52,8 @@ import { InstructorDeleteComponent } from './component/instructor-delete/instruc
     InstructorListComponent,
     InstructorEditComponent,
     InstructorSaveComponent,
-    InstructorDeleteComponent
+    InstructorDeleteComponent,
+    EnrollmentListComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +64,8 @@ import { InstructorDeleteComponent } from './component/instructor-delete/instruc
   providers: [
     CourseService,
     StudentService,
-    InstructorService
+    InstructorService,
+    EnrollmentService
   ],
   bootstrap: [AppComponent]
 })

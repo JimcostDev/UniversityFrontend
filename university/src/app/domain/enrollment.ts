@@ -8,7 +8,7 @@ export class Enrollment {
         public StudentID: number,
         public Grade: number,
 
-        //relaciones
+        //relaciones (dependencias)
         public Course: Course,
         public Student: Student
 
