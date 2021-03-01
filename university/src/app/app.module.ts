@@ -33,6 +33,7 @@ import { InstructorDeleteComponent } from './component/instructor-delete/instruc
 import { EnrollmentService } from './service/enrollment.service';
 import { EnrollmentListComponent } from './component/enrollment-list/enrollment-list.component';
 import { EnrollmentSaveComponent } from './component/enrollment-save/enrollment-save.component';
+import { EnrollmentEditComponent } from './component/enrollment-edit/enrollment-edit.component';
 
 
 
@@ -55,7 +56,8 @@ import { EnrollmentSaveComponent } from './component/enrollment-save/enrollment-
     InstructorSaveComponent,
     InstructorDeleteComponent,
     EnrollmentListComponent,
-    EnrollmentSaveComponent
+    EnrollmentSaveComponent,
+    EnrollmentEditComponent
   ],
   imports: [
     BrowserModule,
