@@ -43,6 +43,11 @@ import { CourseInstructorSaveComponent } from './component/course-instructor-sav
 import { CourseInstructorEditComponent } from './component/course-instructor-edit/course-instructor-edit.component';
 import { CourseInstructorDeleteComponent } from './component/course-instructor-delete/course-instructor-delete.component';
 
+//Departments
+import { DepartmentService } from './service/department.service';
+import { DepartmentListComponent } from './component/department-list/department-list.component';
+
+
 
 
 
@@ -71,7 +76,8 @@ import { CourseInstructorDeleteComponent } from './component/course-instructor-d
     CourseInstructorListComponent,
     CourseInstructorSaveComponent,
     CourseInstructorEditComponent,
-    CourseInstructorDeleteComponent
+    CourseInstructorDeleteComponent,
+    DepartmentListComponent
   ],
   imports: [
     BrowserModule,
@@ -84,7 +90,8 @@ import { CourseInstructorDeleteComponent } from './component/course-instructor-d
     StudentService,
     InstructorService,
     EnrollmentService,
-    CourseInstructorService
+    CourseInstructorService,
+    DepartmentService
   ],
   bootstrap: [AppComponent]
 })
