@@ -20,7 +20,7 @@ export class DepartmentSaveComponent implements OnInit {
     private router: Router) { }
 
     ngOnInit(): void {
-      this.department = new Department(0, '', 0, new Date());
+      this.department = new Department(0, '', 0, new Date(), 0);
     }
     public save() {
   

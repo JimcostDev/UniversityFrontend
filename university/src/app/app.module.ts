@@ -47,6 +47,7 @@ import { CourseInstructorDeleteComponent } from './component/course-instructor-d
 import { DepartmentService } from './service/department.service';
 import { DepartmentListComponent } from './component/department-list/department-list.component';
 import { DepartmentSaveComponent } from './component/department-save/department-save.component';
+import { DepartmentEditComponent } from './component/department-edit/department-edit.component';
 
 
 
@@ -79,7 +80,8 @@ import { DepartmentSaveComponent } from './component/department-save/department-
     CourseInstructorEditComponent,
     CourseInstructorDeleteComponent,
     DepartmentListComponent,
-    DepartmentSaveComponent
+    DepartmentSaveComponent,
+    DepartmentEditComponent
   ],
   imports: [
     BrowserModule,

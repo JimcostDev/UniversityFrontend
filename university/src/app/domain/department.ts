@@ -4,6 +4,7 @@ export class Department {
         public Name: string,
         public Budget: number,
         public StartDate: Date,
+        public InstructorID: number
 
         //relaciones (dependencias)
         // public Instructor: Instructor

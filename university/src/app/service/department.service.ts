@@ -26,4 +26,9 @@ export class DepartmentService {
   public save(department: Department): Observable<any> {
     return this.httpClient.post(this.url, department);
   }
+
+  public edit(department: Department): Observable<any>{
+    return this.httpClient.put(this.url + department.DepartmentID, department);
+  }
+
 }
