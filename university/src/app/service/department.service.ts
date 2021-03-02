@@ -30,5 +30,8 @@ export class DepartmentService {
   public edit(department: Department): Observable<any>{
     return this.httpClient.put(this.url + department.DepartmentID, department);
   }
+  public delete(id: number) {
+    return this.httpClient.delete(this.url + id)
+  }
 
 }

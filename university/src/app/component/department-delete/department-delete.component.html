@@ -1,0 +1,76 @@
+<div class="container">
+    <h2>Delete Department</h2>
+  
+    <div class="form-row" *ngIf="!showMsg">
+      <div class="alert alert-danger col-md-12" role="alert">
+        Are You Sure?
+        <br>
+        <div class="btn-group" role="group">
+          <button class="btn btn-outline-danger btn-sm" (click)="delete()">Delete</button>
+          <a class="btn btn-outline-danger btn-sm" [routerLink]="[ '/department-list' ]">Back</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="form-row" *ngIf="showMsg">
+      <div class="alert alert-{{type}} col-md-12" role="alert">
+        {{msg}}
+        <br>
+        <a class="btn btn-outline-danger btn-sm" [routerLink]="[ '/department-list' ]">Back</a>
+      </div>
+    </div>
+  
+    <form #departmentForm="ngForm">
+        <div class="form-row">
+          <div class="col-md-4">
+            <label>Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enther the name"
+              class="form-control"
+              #name
+              [(ngModel)]="department.Name"
+            />
+          </div>
+          <div class="col-md-4">
+            <label>Budget:</label>
+            <input
+              type="text"
+              id="budget"
+              name="budget"
+              placeholder="Enther the budget"
+              class="form-control"
+              #budget
+              [(ngModel)]="department.Budget"
+            />
+          </div>
+          <div class="col-md-4">
+            <label>StartDate:</label>
+            <input
+              type="date"
+              id="startDate"
+              name="startDate"
+              placeholder="Enther the start date"
+              class="form-control"
+              #startDate
+              [(ngModel)]="department.StartDate"
+            />
+          </div>
+          <div class="col-md-4">
+            <label>InstructorID:</label>
+            <input
+              type="text"
+              id="instructorID"
+              name="instructorID"
+              placeholder="Enther the instructor ID"
+              class="form-control"
+              #instructorID
+              [(ngModel)]="department.InstructorID"
+            />
+          </div>
+        </div>
+      </form>
+  
+  </div>
