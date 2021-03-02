@@ -14,6 +14,14 @@
 
 -- ng g service nombre-carpeta/nombre-archivo -> generar un servicio (capa logica)
 
+## PUBLICAR EN IIS
+
+-- ng build --prod
+
+-- en la carpeta dist queda nuestra carpeta con la compilacion del proyecto
+
+-- copiamos dicha carpeta y la publicamos en iis
+
 ## LISTAR
 
 -- 1. crear el componente para la entidad -> ng g component component/course-list
