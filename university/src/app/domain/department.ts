@@ -2,7 +2,7 @@ export class Department {
     constructor(
         public DepartmentID: number,
         public Name: string,
-        public Budget: Float32List,
+        public Budget: number,
         public StartDate: Date,
 
         //relaciones (dependencias)
