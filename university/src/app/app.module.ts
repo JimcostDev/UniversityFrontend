@@ -50,6 +50,11 @@ import { DepartmentSaveComponent } from './component/department-save/department-
 import { DepartmentEditComponent } from './component/department-edit/department-edit.component';
 import { DepartmentDeleteComponent } from './component/department-delete/department-delete.component';
 
+//OfficeAssignment
+import { OfficeAssignmentService } from './service/office-assignment.service';
+import { OfficeAssignmentListComponent } from './component/office-assignment-list/office-assignment-list.component';
+
+
 
 
 
@@ -83,7 +88,8 @@ import { DepartmentDeleteComponent } from './component/department-delete/departm
     DepartmentListComponent,
     DepartmentSaveComponent,
     DepartmentEditComponent,
-    DepartmentDeleteComponent
+    DepartmentDeleteComponent,
+    OfficeAssignmentListComponent
   ],
   imports: [
     BrowserModule,
@@ -97,7 +103,8 @@ import { DepartmentDeleteComponent } from './component/department-delete/departm
     InstructorService,
     EnrollmentService,
     CourseInstructorService,
-    DepartmentService
+    DepartmentService,
+    OfficeAssignmentService
   ],
   bootstrap: [AppComponent]
 })

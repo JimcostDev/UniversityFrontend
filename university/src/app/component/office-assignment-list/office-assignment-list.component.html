@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>Instructors</h1>
+
+  <a
+    class="btn btn-sm btn-outline-success"
+    [routerLink]="['/officeAssignment-save']"
+    >Create</a
+  >
+  <br />
+  <table class="table table-bordered">
+    <tr>
+      <td>InstructorID</td>
+      <td>Location</td>
+      <td></td>
+    </tr>
+    <tr *ngFor="let item of officeAssignments">
+      <td>{{ item.InstructorID }}</td>
+      <td>{{ item.Location }}</td>
+      <td>
+        <div class="btn-group" role="group">
+          <a
+            class="btn btn-sm btn-outline-warning"
+            [routerLink]="['/officeAssignment-edit', item.ID]"
+            >Edit</a
+          >
+          <a
+            class="btn btn-sm btn-outline-danger"
+            [routerLink]="['/officeAssignment-delete', item.ID]"
+            >Delete</a
+          >
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
