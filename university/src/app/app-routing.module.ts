@@ -20,6 +20,7 @@ import { InstructorDeleteComponent } from './component/instructor-delete/instruc
 import { InstructorEditComponent } from './component/instructor-edit/instructor-edit.component';
 import { InstructorListComponent } from './component/instructor-list/instructor-list.component';
 import { InstructorSaveComponent } from './component/instructor-save/instructor-save.component';
+import { OfficeAssignmentDeleteComponent } from './component/office-assignment-delete/office-assignment-delete.component';
 import { OfficeAssignmentEditComponent } from './component/office-assignment-edit/office-assignment-edit.component';
 import { OfficeAssignmentListComponent } from './component/office-assignment-list/office-assignment-list.component';
 import { OfficeAssignmentSaveComponent } from './component/office-assignment-save/office-assignment-save.component';
@@ -55,7 +56,8 @@ const routes: Routes = [
   { path:'department-delete/:id', component: DepartmentDeleteComponent },
   { path:'officeAssignment-list', component: OfficeAssignmentListComponent },
   { path:'officeAssignment-save', component: OfficeAssignmentSaveComponent },
-  { path:'officeAssignment-edit/:id', component: OfficeAssignmentEditComponent }
+  { path:'officeAssignment-edit/:id', component: OfficeAssignmentEditComponent },
+  { path:'officeAssignment-delete/:id', component: OfficeAssignmentDeleteComponent }
 ];
 
 @NgModule({
