@@ -55,6 +55,7 @@ import { OfficeAssignmentService } from './service/office-assignment.service';
 import { OfficeAssignmentListComponent } from './component/office-assignment-list/office-assignment-list.component';
 import { OfficeAssignmentSaveComponent } from './component/office-assignment-save/office-assignment-save.component';
 import { OfficeAssignmentEditComponent } from './component/office-assignment-edit/office-assignment-edit.component';
+import { OfficeAssignmentDeleteComponent } from './component/office-assignment-delete/office-assignment-delete.component';
 
 
 
@@ -93,7 +94,8 @@ import { OfficeAssignmentEditComponent } from './component/office-assignment-edi
     DepartmentDeleteComponent,
     OfficeAssignmentListComponent,
     OfficeAssignmentSaveComponent,
-    OfficeAssignmentEditComponent
+    OfficeAssignmentEditComponent,
+    OfficeAssignmentDeleteComponent
   ],
   imports: [
     BrowserModule,

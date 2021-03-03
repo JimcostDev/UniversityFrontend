@@ -29,4 +29,8 @@ export class OfficeAssignmentService {
   public edit(officeAssignment: OfficeAssignment): Observable<any>{
     return this.httpClient.put(this.url + officeAssignment.InstructorID, officeAssignment);
   }
+
+  public delete(id: number) {
+    return this.httpClient.delete(this.url + id)
+  }
 }
