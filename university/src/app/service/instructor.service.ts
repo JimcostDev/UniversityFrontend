@@ -22,12 +22,12 @@ export class InstructorService {
     return this.httpClient.get(this.url + id)
   }
 
-  public save(student: Instructor): Observable<any> {
-    return this.httpClient.post(this.url, student);
+  public save(instructor: Instructor): Observable<any> {
+    return this.httpClient.post(this.url, instructor);
   }
 
-  public edit(student: Instructor): Observable<any>{
-    return this.httpClient.put(this.url + student.ID, student);
+  public edit(instructor: Instructor): Observable<any>{
+    return this.httpClient.put(this.url + instructor.ID, instructor);
   }
 
   public delete(id: number) {

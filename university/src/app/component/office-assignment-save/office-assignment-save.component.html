@@ -1,0 +1,50 @@
+<div class="container">
+  <h2>Create OfficeAssignment</h2>
+
+  <div class="form-row" *ngIf="showMsg">
+    <div class="alert alert-{{ type }} col-md-12" role="alert">
+      {{ msg }}
+    </div>
+  </div>
+
+  <form #officeAssignmentForm="ngForm">
+    <div class="form-row">
+      <div class="col-md-4">
+        <label>InstructorID:</label>
+        <input
+          type="text"
+          id="instructorID"
+          name="instructorID"
+          placeholder="Enther the instructor ID"
+          class="form-control"
+          #instructorID
+          [(ngModel)]="officeAssignment.InstructorID"
+        />
+      </div>
+      <div class="col-md-4">
+        <label>Location:</label>
+        <input
+          type="text"
+          id="location"
+          name="location"
+          placeholder="Enther the location"
+          class="form-control"
+          #location
+          [(ngModel)]="officeAssignment.Location"
+        />
+      </div>
+    </div>
+
+    <br />
+    <div class="btn-group" role="group">
+      <button class="btn btn-outline-primary btn-sm" (click)="save()">
+        Save
+      </button>
+      <a
+        class="btn btn-outline-primary btn-sm"
+        [routerLink]="['/officeAssignment-list']"
+        >Back</a
+      >
+    </div>
+  </form>
+</div>

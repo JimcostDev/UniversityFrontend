@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Instructors</h1>
+  <h1>OfficeAssignments</h1>
 
   <a
     class="btn btn-sm btn-outline-success"
@@ -20,12 +20,12 @@
         <div class="btn-group" role="group">
           <a
             class="btn btn-sm btn-outline-warning"
-            [routerLink]="['/officeAssignment-edit', item.ID]"
+            [routerLink]="['/officeAssignment-edit', item.InstructorID]"
             >Edit</a
           >
           <a
             class="btn btn-sm btn-outline-danger"
-            [routerLink]="['/officeAssignment-delete', item.ID]"
+            [routerLink]="['/officeAssignment-delete', item.InstructorID]"
             >Delete</a
           >
         </div>

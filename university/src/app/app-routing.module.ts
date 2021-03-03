@@ -21,6 +21,7 @@ import { InstructorEditComponent } from './component/instructor-edit/instructor-
 import { InstructorListComponent } from './component/instructor-list/instructor-list.component';
 import { InstructorSaveComponent } from './component/instructor-save/instructor-save.component';
 import { OfficeAssignmentListComponent } from './component/office-assignment-list/office-assignment-list.component';
+import { OfficeAssignmentSaveComponent } from './component/office-assignment-save/office-assignment-save.component';
 import { StudentDeleteComponent } from './component/student-delete/student-delete.component';
 import { StudentEditComponent } from './component/student-edit/student-edit.component';
 import { StudentListComponent } from './component/student-list/student-list.component';
@@ -51,7 +52,8 @@ const routes: Routes = [
   { path:'department-save', component: DepartmentSaveComponent },
   { path:'department-edit/:id', component: DepartmentEditComponent },
   { path:'department-delete/:id', component: DepartmentDeleteComponent },
-  { path:'officeAssignment-list', component: OfficeAssignmentListComponent }
+  { path:'officeAssignment-list', component: OfficeAssignmentListComponent },
+  { path:'officeAssignment-save', component: OfficeAssignmentSaveComponent },
 ];
 
 @NgModule({
