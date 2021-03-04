@@ -16,11 +16,17 @@
 
 ## PUBLICAR EN IIS
 
--- ng build --prod
+-- 1. ng build --prod
 
--- en la carpeta dist queda nuestra carpeta con la compilacion del proyecto
+-- 2. en la carpeta dist queda nuestra carpeta con la compilacion del proyecto
 
--- copiamos dicha carpeta y la publicamos en iis
+-- 3. copiamos dicha carpeta y la publicamos en iis (inetput, wwwroot)
+
+## PUBLICAR EN GITHUB PAGES
+
+-- 1. ng add angular-cli-ghpages
+
+-- 2. ng deploy --base-href=https://jimcostdev.github.io/UniversityFrontend/
 
 ## LISTAR
 
