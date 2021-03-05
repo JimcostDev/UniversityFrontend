@@ -46,16 +46,19 @@
         />
       </div>
       <div class="col-md-4">
+        
         <label>InstructorID:</label>
-        <input
-          type="text"
-          id="instructorID"
-          name="instructorID"
-          placeholder="Enther the instructor ID"
+        <select
           class="form-control"
-          #instructorID
+          id="InstructorID"
+          name="InstructorID"
           [(ngModel)]="department.InstructorID"
-        />
+          #InstructorID
+        >
+          <option *ngFor="let instructor of instructors" [value]="instructor.ID">
+            {{ instructor.FullName }}
+          </option>
+        </select>
       </div>
     </div>
 
@@ -64,7 +67,9 @@
       <button class="btn btn-outline-primary btn-sm" (click)="save()">
         Save
       </button>
-      <a class="btn btn-outline-primary btn-sm" [routerLink]="['/department-list']"
+      <a
+        class="btn btn-outline-primary btn-sm"
+        [routerLink]="['/department-list']"
         >Back</a
       >
     </div>

@@ -12,6 +12,7 @@ export class CourseInstructorService {
 
   constructor(public httpClient: HttpClient) {
     this.url = environment.apiUrl + 'api/CourseInstructors/';
+    //this.url = 'https://university-api.azurewebsites.net/api/CourseInstructors/';
   }
   public getAll(): Observable<any> {
     return this.httpClient.get(this.url);

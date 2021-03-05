@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { Department } from 'src/app/domain/department';
+import { Instructor } from 'src/app/domain/instructor';
 import { DepartmentService } from 'src/app/service/department.service';
+import { InstructorService } from 'src/app/service/instructor.service';
 
 @Component({
   selector: 'app-department-save',
@@ -11,13 +14,21 @@ import { DepartmentService } from 'src/app/service/department.service';
 export class DepartmentSaveComponent implements OnInit {
 
   public department!: Department;
+  public subInstructors: Subscription = new Subscription;
+  public instructors: Instructor[] = [];
 
   public showMsg: boolean = false;
   public msg!: string;
   public type!: string;
 
   constructor(public departmentService: DepartmentService,
-    private router: Router) { }
+    public instructorService: InstructorService,
+    private router: Router,
+    public activatedRoute: ActivatedRoute,) { }
+
+    ngOnDestroy(): void {
+      this.subInstructors.unsubscribe();
+    }
 
     ngOnInit(): void {
       this.department = new Department(0, '', 0, new Date(), 0);
@@ -36,6 +47,10 @@ export class DepartmentSaveComponent implements OnInit {
       });
     }
 
-  
+    getInstructors() {
+      this.subInstructors = this.instructorService.getAll().subscribe(data => {
+        this.instructors = data;
+      });
+    }
 
 }

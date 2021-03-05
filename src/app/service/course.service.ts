@@ -17,11 +17,15 @@ export class CourseService {
     this.url = environment.apiUrl + 'api/Courses/';
   }
   public getAll(): Observable<any> {
-    return this.httpClient.get(this.url);
+    return this.httpClient.get(this.url + 'GetCourses/');    
   }
 
-  public getById(id: number): Observable<any>{
-    return this.httpClient.get(this.url + id)
+  public getById(id: number): Observable<any> {  
+    return this.httpClient.get(this.url + 'GetCourse/' + id);   
+  }
+
+  public getCoursesByStudentId(id: number): Observable<any> {  
+    return this.httpClient.get(this.url + 'GetCoursesByStudentId/' + id);   
   }
 
   public save(course: Course): Observable<any> {

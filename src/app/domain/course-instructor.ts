@@ -1,3 +1,6 @@
+import { Course } from "./course";
+import { Instructor } from "./instructor";
+
 export class CourseInstructor {
     constructor(
         public ID: number,
@@ -5,8 +8,8 @@ export class CourseInstructor {
         public InstructorID: number,
 
         //relaciones (dependencias)
-        // public Course: Course,
-        // public Instructor: Instructor
+        public Course: Course,
+        public Instructor: Instructor
 
         ) { }
 }
