@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Course } from 'src/app/domain/course';
 import { CourseInstructor } from 'src/app/domain/course-instructor';
+import { Instructor } from 'src/app/domain/instructor';
 import { CourseInstructorService } from 'src/app/service/course-instructor.service';
 
 @Component({
@@ -20,7 +22,7 @@ export class CourseInstructorSaveComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    this.courseInstructor = new CourseInstructor(0, 0, 0);
+    this.courseInstructor = new CourseInstructor(0, 0, 0, new Course(0,'',0), new Instructor(0,'','',new Date(),''));
   }
   public save() {
 

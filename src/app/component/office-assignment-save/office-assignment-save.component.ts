@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Instructor } from 'src/app/domain/instructor';
 import { OfficeAssignment } from 'src/app/domain/office-assignment';
 import { OfficeAssignmentService } from 'src/app/service/office-assignment.service';
 
@@ -20,7 +21,7 @@ export class OfficeAssignmentSaveComponent implements OnInit {
     private router: Router) { }
 
     ngOnInit(): void {
-      this.officeAssignment = new OfficeAssignment(0, '')
+      this.officeAssignment = new OfficeAssignment(0, '',new Instructor(0,'','',new Date(),''))
     }
   
     public save() {

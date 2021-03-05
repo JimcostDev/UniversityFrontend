@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  //apiUrl: 'http://localhost/University.API/'
-  apiUrl: 'https://university-api.azurewebsites.net/'
+  apiUrl: 'http://localhost/University.API/'
+  //apiUrl: 'https://university-api.azurewebsites.net/'
 };
 
 /*

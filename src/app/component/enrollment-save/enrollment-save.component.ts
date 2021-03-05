@@ -21,7 +21,7 @@ export class EnrollmentSaveComponent implements OnInit {
   constructor(public enrollmentService: EnrollmentService,
     private router: Router) { }
   ngOnInit(): void {
-    this.enrollment = new Enrollment(0, 0, 0, 0);
+    this.enrollment = new Enrollment(0, 0, 0, 0,new Course(0,'',0),new Student(0,'','',new Date(),''));
   }
   public save() {
 
