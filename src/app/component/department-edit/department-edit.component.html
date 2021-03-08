@@ -1,73 +1,79 @@
 <div class="container">
-    <h2>Edit Department</h2>
-  
-    <div class="form-row" *ngIf="showMsg">
-      <div class="alert alert-{{ type }} col-md-12" role="alert">
-        {{ msg }}
+  <h2>Edit Department</h2>
+
+  <div class="form-row" *ngIf="showMsg">
+    <div class="alert alert-{{ type }} col-md-12" role="alert">
+      {{ msg }}
+    </div>
+  </div>
+
+  <form #departmentForm="ngForm">
+    <div class="form-row">
+      <div class="col-md-4">
+        <label>Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enther the name"
+          class="form-control"
+          #name
+          [(ngModel)]="department.Name"
+        />
+      </div>
+      <div class="col-md-4">
+        <label>Budget:</label>
+        <input
+          type="text"
+          id="budget"
+          name="budget"
+          placeholder="Enther the budget"
+          class="form-control"
+          #budget
+          [(ngModel)]="department.Budget"
+        />
+      </div>
+      <div class="col-md-4">
+        <label>StartDate:</label>
+        <input
+          type="date"
+          id="startDate"
+          name="startDate"
+          placeholder="Enther the start date"
+          class="form-control"
+          #startDate
+          [(ngModel)]="department.StartDate"
+        />
+      </div>
+      <div class="col-md-4">
+        <label>InstructorID:</label>
+        <select
+          class="form-control"
+          id="InstructorID"
+          name="InstructorID"
+          [(ngModel)]="department.InstructorID"
+          #InstructorID
+        >
+          <option
+            *ngFor="let instructor of instructors"
+            [value]="instructor.ID"
+          >
+            {{ instructor.FullName }}
+          </option>
+        </select>
       </div>
     </div>
-  
-    <form #departmentForm="ngForm">
-      <div class="form-row">
-        <div class="col-md-4">
-          <label>Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enther the name"
-            class="form-control"
-            #name
-            [(ngModel)]="department.Name"
-          />
-        </div>
-        <div class="col-md-4">
-          <label>Budget:</label>
-          <input
-            type="text"
-            id="budget"
-            name="budget"
-            placeholder="Enther the budget"
-            class="form-control"
-            #budget
-            [(ngModel)]="department.Budget"
-          />
-        </div>
-        <div class="col-md-4">
-          <label>StartDate:</label>
-          <input
-            type="date"
-            id="startDate"
-            name="startDate"
-            placeholder="Enther the start date"
-            class="form-control"
-            #startDate
-            [(ngModel)]="department.StartDate"
-          />
-        </div>
-        <div class="col-md-4">
-          <label>InstructorID:</label>
-          <input
-            type="text"
-            id="instructorID"
-            name="instructorID"
-            placeholder="Enther the instructor ID"
-            class="form-control"
-            #instructorID
-            [(ngModel)]="department.InstructorID"
-          />
-        </div>
-      </div>
-  
-      <br />
-      <div class="btn-group" role="group">
-        <button class="btn btn-outline-primary btn-sm" (click)="edit()">
-          Save
-        </button>
-        <a class="btn btn-outline-primary btn-sm" [routerLink]="['/department-list']"
-          >Back</a
-        >
-      </div>
-    </form>
-  </div>
-  
+
+    <br />
+    <div class="btn-group" role="group">
+      <button class="btn btn-outline-primary btn-sm" (click)="edit()">
+        Save
+      </button>
+      <a
+        class="btn btn-outline-primary btn-sm"
+        [routerLink]="['/department-list']"
+        >Back</a
+      >
+    </div>
+  </form>
+</div>

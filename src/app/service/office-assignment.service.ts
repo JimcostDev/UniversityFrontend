@@ -22,6 +22,10 @@ export class OfficeAssignmentService {
     return this.httpClient.get(this.url + id)
   }
 
+  public getOfficesByInstructorId(id: number): Observable<any> {  
+    return this.httpClient.get(this.url  + id);   
+  }
+
   public save(officeAssignment: OfficeAssignment): Observable<any> {
     return this.httpClient.post(this.url, officeAssignment);
   }

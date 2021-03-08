@@ -1,0 +1,32 @@
+<div class="container">
+    <br />
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a [routerLink]="['/student-list']">Instructors</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Offices</li>
+        </ol>
+    </nav>
+
+    <div class="form-row" *ngIf="showMsg">
+        <div class="alert alert-{{type}} col-md-12" role="alert">
+            {{msg}}
+        </div>
+    </div>
+    
+    <label>Full Name: {{ instructor.FullName }}</label><br />      
+    <br>
+    <div class="table-responsive">
+        <table class="table table-bordered table-responsive">
+            <thead>
+                <tr>                    
+                    <td>Location</td>                              
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let office of offices">                    
+                    <td>{{ office.Instructor.FullName }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

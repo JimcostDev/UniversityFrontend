@@ -16,6 +16,7 @@ export class DepartmentSaveComponent implements OnInit {
   public department!: Department;
   public subInstructors: Subscription = new Subscription;
   public instructors: Instructor[] = [];
+  public instructorsFilter: Instructor[] = [];
 
   public showMsg: boolean = false;
   public msg!: string;
@@ -50,6 +51,10 @@ export class DepartmentSaveComponent implements OnInit {
     getInstructors() {
       this.subInstructors = this.instructorService.getAll().subscribe(data => {
         this.instructors = data;
+        this.instructorsFilter = [];
+
+      // this.instructors.forEach(x => {
+      //   this.instructorsFilter.push(x.Instructor);
       });
     }
 

@@ -57,6 +57,7 @@ import { OfficeAssignmentSaveComponent } from './component/office-assignment-sav
 import { OfficeAssignmentEditComponent } from './component/office-assignment-edit/office-assignment-edit.component';
 import { OfficeAssignmentDeleteComponent } from './component/office-assignment-delete/office-assignment-delete.component';
 import { StudentCoursesListComponent } from './component/student-courses-list/student-courses-list.component';
+import { InstructorOfficesListComponent } from './component/instructor-offices-list/instructor-offices-list.component';
 
 
 
@@ -97,7 +98,8 @@ import { StudentCoursesListComponent } from './component/student-courses-list/st
     OfficeAssignmentSaveComponent,
     OfficeAssignmentEditComponent,
     OfficeAssignmentDeleteComponent,
-    StudentCoursesListComponent
+    StudentCoursesListComponent,
+    InstructorOfficesListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { Department } from 'src/app/domain/department';
+import { Instructor } from 'src/app/domain/instructor';
 import { DepartmentService } from 'src/app/service/department.service';
+import { InstructorService } from 'src/app/service/instructor.service';
 
 @Component({
   selector: 'app-department-edit',
@@ -11,6 +14,9 @@ import { DepartmentService } from 'src/app/service/department.service';
 export class DepartmentEditComponent implements OnInit {
   public id!: number;
   public department!: Department;
+  public instructors: Instructor[] = [];
+  public subInstructors: Subscription = new Subscription;
+  public instructorsFilter: Instructor[] = [];
 
   public showMsg: boolean = false;
   public msg!: string;
@@ -18,6 +24,7 @@ export class DepartmentEditComponent implements OnInit {
 
   constructor(
     public departmentService: DepartmentService,
+    public instructorService: InstructorService,
     private router: Router,
     private activatedRoute: ActivatedRoute
   ) {}
@@ -49,5 +56,15 @@ export class DepartmentEditComponent implements OnInit {
         this.type = 'danger';
       }
     );
+  }
+
+  getInstructors() {
+    this.subInstructors = this.instructorService.getAll().subscribe(data => {
+      this.instructors = data;
+      this.instructorsFilter = [];
+
+    // this.instructors.forEach(x => {
+    //   this.instructorsFilter.push(x.Instructor);
+    });
   }
 }
