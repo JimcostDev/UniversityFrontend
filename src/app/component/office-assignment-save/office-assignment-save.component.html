@@ -9,17 +9,22 @@
 
   <form #officeAssignmentForm="ngForm">
     <div class="form-row">
-      <div class="col-md-4 ">
+      <div class="col-md-4">
         <label>InstructorID:</label>
-        <input
-          type="text"
-          id="instructorID"
-          name="instructorID"
-          placeholder="Enther the instructor ID"
+        <select
           class="form-control"
-          #instructorID
+          id="InstructorID"
+          name="InstructorID"
           [(ngModel)]="officeAssignment.InstructorID"
-        />
+          #InstructorID
+        >
+          <option
+            *ngFor="let instructor of instructors"
+            [value]="instructor.ID"
+          >
+            {{ instructor.FullName }}
+          </option>
+        </select>
       </div>
       <div class="col-md-4">
         <label>Location:</label>

@@ -14,9 +14,10 @@ import { OfficeAssignmentService } from 'src/app/service/office-assignment.servi
 export class InstructorOfficesListComponent implements OnInit {
   public id: number = 0;
   public instructor: Instructor = new Instructor(0, '', '', new Date(), '');
+  public office: OfficeAssignment = new OfficeAssignment(0, '', new Instructor(0,'','', new Date(),''));
   public offices: OfficeAssignment[] = [];
-  public officesFilter: OfficeAssignment[] = [];
   public subOffices: Subscription = new Subscription();
+  public ifOfficesExist: boolean = false;
 
   public showMsg: boolean = false;
   public msg: string = '';
@@ -42,21 +43,39 @@ export class InstructorOfficesListComponent implements OnInit {
     let param = this.activatedRoute.snapshot.paramMap.get('id');
     this.id = Number(param);
 
-    this.officeService.getById(this.id).subscribe((data) => {
+    this.instructorService.getById(this.id).subscribe((data) => {
       this.instructor = data;
     });
   }
 
-  getOffices() {
-    this.subOffices = this.officeService.getAll().subscribe((data) => {
-      this.offices = data;
-      this.officesFilter = [];
-    });
-  }
+ 
 
   getOfficesByInstructorId() {
     let param = this.activatedRoute.snapshot.paramMap.get('id');
     this.id = Number(param);
-    this.getOffices();
+
+    this.subOffices = this.officeService.getAll().subscribe((data) => {
+      this.offices = data;
+      this.offices = this.offices.filter((x) => x.InstructorID === this.id);
+
+      if (this.offices.length > 0) {
+        this.ifOfficesExist = true;
+        this.office = this.offices[0];
+      }
+    });
+  }
+
+  public saveOffice() {
+    this.office.InstructorID = this.id;
+    console.log(this.office);
+    
+    this.officeService.save(this.office).subscribe(data => {
+      this.router.navigate(['/instructor-list']);
+    },error => {
+      console.log(error);
+      this.showMsg = true;
+      this.msg = 'An error has ocurred in the procedure';
+      this.type = 'danger';
+    });
   }
 }

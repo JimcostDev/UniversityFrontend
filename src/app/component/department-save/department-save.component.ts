@@ -33,6 +33,7 @@ export class DepartmentSaveComponent implements OnInit {
 
     ngOnInit(): void {
       this.department = new Department(0, '', 0, new Date(), 0, new Instructor(0,'','',new Date(),''));
+      this.getInstructors() ;
     }
     public save() {
   

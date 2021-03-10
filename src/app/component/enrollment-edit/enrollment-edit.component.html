@@ -1,63 +1,68 @@
 <div class="container">
-    <h2>Edit Enrollment</h2>
-  
-    <div class="form-row" *ngIf="showMsg">
-      <div class="alert alert-{{ type }} col-md-12" role="alert">
-        {{ msg }}
+  <h2>Edit Enrollment</h2>
+
+  <div class="form-row" *ngIf="showMsg">
+    <div class="alert alert-{{ type }} col-md-12" role="alert">
+      {{ msg }}
+    </div>
+  </div>
+
+  <form #enrollmentForm="ngForm">
+    <div class="form-row">
+      <div class="col-md-4">
+        <label>CourseID:</label>
+        <select
+          class="form-control"
+          id="CourseID"
+          name="CourseID"
+          [(ngModel)]="enrollment.CourseID"
+          #CourseID
+        >
+          <option *ngFor="let course of courses" [value]="course.CourseID">
+            {{ course.Title }}
+          </option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label>StudentID:</label>
+        <select
+          class="form-control"
+          id="StudentID"
+          name="StudentID"
+          [(ngModel)]="enrollment.StudentID"
+          #StudentID
+        >
+          <option *ngFor="let student of students" [value]="student.ID">
+            {{ student.FullName }}
+          </option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label>Grade:</label>
+        <input
+          type="number"
+          id="grade"
+          name="grade"
+          placeholder="Enther the grade"
+          class="form-control"
+          min="0"
+          max="4"
+          #grade
+          [(ngModel)]="enrollment.Grade"
+        />
       </div>
     </div>
-  
-    <form #enrollmentForm="ngForm">
-      <div class="form-row">
-        <div class="col-md-4">
-          <label>CourseID:</label>
-          <input
-            type="text"
-            id="courseID"
-            name="courseID"
-            placeholder="Enther the course ID"
-            class="form-control"
-            #courseID
-            [(ngModel)]="enrollment.CourseID"
-          />
-        </div>
-        <div class="col-md-4">
-          <label>StudentID:</label>
-          <input
-            type="text"
-            id="studentID"
-            name="studentID"
-            placeholder="Enther the student ID"
-            class="form-control"
-            #studentID
-            [(ngModel)]="enrollment.StudentID"
-          />
-        </div>
-        <div class="col-md-4">
-          <label>Grade:</label>
-          <input
-            type="number"
-            id="grade"
-            name="grade"
-            placeholder="Enther the grade"
-            class="form-control"
-            min="0"
-            max="4"
-            #grade
-            [(ngModel)]="enrollment.Grade"
-          />
-        </div>
-      </div>
-  
-      <br />
-      <div class="btn-group" role="group">
-        <button class="btn btn-outline-primary btn-sm" (click)="edit()">
-          Edit
-        </button>
-        <a class="btn btn-outline-primary btn-sm" [routerLink]="['/enrollment-list']"
-          >Back</a
-        >
-      </div>
-    </form>
-  </div>
-  
+
+    <br />
+    <div class="btn-group" role="group">
+      <button class="btn btn-outline-primary btn-sm" (click)="edit()">
+        Edit
+      </button>
+      <a
+        class="btn btn-outline-primary btn-sm"
+        [routerLink]="['/enrollment-list']"
+        >Back</a
+      >
+    </div>
+  </form>
+</div>

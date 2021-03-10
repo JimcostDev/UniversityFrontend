@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { Instructor } from 'src/app/domain/instructor';
 import { OfficeAssignment } from 'src/app/domain/office-assignment';
+import { InstructorService } from 'src/app/service/instructor.service';
 import { OfficeAssignmentService } from 'src/app/service/office-assignment.service';
 
 @Component({

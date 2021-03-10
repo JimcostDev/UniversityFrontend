@@ -31,6 +31,7 @@ export class DepartmentEditComponent implements OnInit {
 
   ngOnInit(): void {
     this.getById();
+    this.getInstructors();
   }
 
   public getById() {

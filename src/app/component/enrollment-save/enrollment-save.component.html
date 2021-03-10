@@ -11,27 +11,37 @@
     <div class="form-row">
       <div class="col-md-4">
         <label>CourseID:</label>
-        <input
-          type="text"
-          id="courseID"
-          name="courseID"
-          placeholder="Enther the course ID"
+        <select
           class="form-control"
-          #courseID
+          id="CourseID"
+          name="CourseID"
           [(ngModel)]="enrollment.CourseID"
-        />
+          #CourseID
+        >
+          <option
+            *ngFor="let course of courses"
+            [value]="course.CourseID"
+          >
+            {{ course.Title }}
+          </option>
+        </select>
       </div>
       <div class="col-md-4">
         <label>StudentID:</label>
-        <input
-          type="text"
-          id="studentID"
-          name="studentID"
-          placeholder="Enther the student ID"
+        <select
           class="form-control"
-          #studentID
+          id="StudentID"
+          name="StudentID"
           [(ngModel)]="enrollment.StudentID"
-        />
+          #StudentID
+        >
+          <option
+            *ngFor="let student of students"
+            [value]="student.ID"
+          >
+            {{ student.FullName }}
+          </option>
+        </select>
       </div>
       <div class="col-md-4">
         <label>Grade:</label>

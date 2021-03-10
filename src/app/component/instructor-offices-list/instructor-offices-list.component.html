@@ -1,32 +1,48 @@
 <div class="container">
-    <br />
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a [routerLink]="['/student-list']">Instructor</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Offices</li>
-        </ol>
-    </nav>
+  <br />
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a [routerLink]="['/student-list']">Instructor</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">Offices</li>
+    </ol>
+  </nav>
 
-    <div class="form-row" *ngIf="showMsg">
-        <div class="alert alert-{{type}} col-md-12" role="alert">
-            {{msg}}
+  <div class="form-row" *ngIf="showMsg">
+    <div class="alert alert-{{ type }} col-md-12" role="alert">
+      {{ msg }}
+    </div>
+  </div>
+
+  <label>Full Name: {{ instructor.FullName }}</label
+  ><br />
+  <label>Hire Date: {{ instructor.HireDate }}</label
+  ><br />
+  <div class="form-row">
+    <div class="col-md-4">
+      <label>Location: </label>
+      <label *ngIf="ifOfficesExist"> {{ office.Location }}</label>
+      <br />
+      <div *ngIf="!ifOfficesExist">
+        <input
+          type="text"
+          [(ngModel)]="office.Location"
+          id="Location"
+          name="Location"
+          class="form-control"
+        />
+        <div class="btn-group" role="group">
+          <button class="btn btn-outline-primary btn-sm" (click)="saveOffice()">
+            Save
+          </button>
         </div>
+      </div>
     </div>
-    
-    <label>Full Name: {{ instructor.FullName }}</label><br />      
-    <br>
-    <div class="table-responsive">
-        <table class="table table-bordered table-responsive">
-            <thead>
-                <tr>                    
-                    <td>Location</td>                              
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let office of offices">                    
-                    <td>{{ office.Instructor.FullName }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <a
+      class="btn btn-outline-primary btn-sm"
+      [routerLink]="['/instructor-list']"
+      >Back</a
+    >
+  </div>
 </div>

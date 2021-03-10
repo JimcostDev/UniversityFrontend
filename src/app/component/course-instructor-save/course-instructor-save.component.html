@@ -11,27 +11,37 @@
     <div class="form-row">
       <div class="col-md-4">
         <label>CourseID:</label>
-        <input
-          type="text"
-          id="courseID"
-          name="courseID"
-          placeholder="Enther the course ID"
+        <select
           class="form-control"
-          #CourseID
+          id="CourseID"
+          name="CourseID"
           [(ngModel)]="courseInstructor.CourseID"
-        />
+          #CourseID
+        >
+          <option
+            *ngFor="let course of courses"
+            [value]="course.CourseID"
+          >
+            {{ course.Title }}
+          </option>
+        </select>
       </div>
       <div class="col-md-4">
         <label>InstructorID:</label>
-        <input
-          type="text"
-          id="instructorID"
-          name="instructorID"
-          placeholder="Enther the instructor ID"
+        <select
           class="form-control"
-          #instructorID
+          id="InstructorID"
+          name="InstructorID"
           [(ngModel)]="courseInstructor.InstructorID"
-        />
+          #InstructorID
+        >
+          <option
+            *ngFor="let instructor of instructors"
+            [value]="instructor.ID"
+          >
+            {{ instructor.FullName }}
+          </option>
+        </select>
       </div>
     </div>
 
@@ -40,7 +50,9 @@
       <button class="btn btn-outline-primary btn-sm" (click)="save()">
         Save
       </button>
-      <a class="btn btn-outline-primary btn-sm" [routerLink]="['/courseInstructor-list']"
+      <a
+        class="btn btn-outline-primary btn-sm"
+        [routerLink]="['/courseInstructor-list']"
         >Back</a
       >
     </div>
